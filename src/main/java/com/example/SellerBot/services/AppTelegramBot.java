@@ -88,6 +88,22 @@ public class AppTelegramBot extends TelegramLongPollingBot {
         } else if (text.equals("Answer4")) {
             user.setSecondAnswer(text);
             sendKeyboardToChat(chatId, "Button 3 is clicked", ReplyKeyboardMarkupUtils.getBackToMainKeyboard());
+        }else if (text.contains("send message to chat:")){
+            String withoutPrefix = text.substring("send message to chat:".length()).trim();
+            int spaceIndex = withoutPrefix.indexOf(' ');
+            if (spaceIndex != -1) {
+                String chatIdStr = withoutPrefix.substring(0, spaceIndex);
+                String message = withoutPrefix.substring(spaceIndex + 1);
+
+                try {
+                    long chatIdToSend = Long.parseLong(chatIdStr);
+                    sendMessageToChat(message,chatIdToSend);
+                } catch (NumberFormatException e) {
+                    log.info("Invalid chat ID format.");
+                }
+            } else {
+                log.info("No message found.");
+            }
         }
         userService.save(user);
     }

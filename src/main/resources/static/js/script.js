@@ -25,6 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 <td>${user.name || 'N/A'}</td>
                 <td>${user.firstAnswer || 'N/A'}</td>
                 <td>${user.secondAnswer || 'N/A'}</td>
+                <td>${user.secondAnswer1 || 'N/A'}</td>
+                <td>${user.secondAnswer2 || 'N/A'}</td>
+                <td>${user.secondAnswer3 || 'N/A'}</td>
+                <td>${user.secondAnswer4 || 'N/A'}</td>
+                <td>${user.secondAnswer5 || 'N/A'}</td>
+                <td>${user.secondAnswer6 || 'N/A'}</td>
+                <td>${user.secondAnswer7 || 'N/A'}</td>
+                <td>${user.secondAnswer8 || 'N/A'}</td>
+                <td>${user.secondAnswer9 || 'N/A'}</td>
+                <td>${user.secondAnswer10 || 'N/A'}</td>
+                <td>${user.secondAnswer11 || 'N/A'}</td>
+                <td>${user.secondAnswer12 || 'N/A'}</td>
+                <td>${user.secondAnswer13 || 'N/A'}</td>
+                <td>${user.secondAnswer14 || 'N/A'}</td>
+                <td>${user.secondAnswer15 || 'N/A'}</td>
+                <td>${user.secondAnswer16 || 'N/A'}</td>
+                <td>${user.secondAnswer17 || 'N/A'}</td>
+                <td>${user.secondAnswer18 || 'N/A'}</td>
+                
             `;
             tableBody.appendChild(row);
         });

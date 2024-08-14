@@ -36,6 +36,24 @@ public class User {
     private UserStatus status;
     private String firstAnswer;
     private String secondAnswer;
+    private String secondAnswer1;
+    private String secondAnswer2;
+    private String secondAnswer3;
+    private String secondAnswer4;
+    private String secondAnswer5;
+    private String secondAnswer6;
+    private String secondAnswer7;
+    private String secondAnswer8;
+    private String secondAnswer9;
+    private String secondAnswer10;
+    private String secondAnswer11;
+    private String secondAnswer12;
+    private String secondAnswer13;
+    private String secondAnswer14;
+    private String secondAnswer15;
+    private String secondAnswer16;
+    private String secondAnswer17;
+    private String secondAnswer18;
     private LocalDateTime dateOfCreated;
     @PrePersist
     private void init(){

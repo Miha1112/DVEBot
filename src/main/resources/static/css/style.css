@@ -15,7 +15,7 @@ header {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 95%;
     margin: 30px auto;
     background: #fff;
     padding: 30px;
@@ -27,7 +27,6 @@ h1 {
     font-size: 2rem;
     margin: 0;
 }
-
 table {
     width: 100%;
     border-collapse: separate;
@@ -43,6 +42,10 @@ thead th {
     font-size: 0.9rem;
     padding: 12px;
     border-bottom: 2px solid #ddd;
+    max-width: 100px; /* Обмежити ширину заголовків стовпців */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 tbody tr {
@@ -58,6 +61,11 @@ tbody tr:hover {
 tbody td {
     padding: 12px;
     border-top: 1px solid #e0e0e0;
+    max-width: 100px; /* Обмежити ширину комірок */
+    overflow: hidden;
+    word-wrap: break-word; /* Перенос тексту на наступний рядок */
+    white-space: normal; /* Дозволити перенос тексту */
+    text-align: left; /* Вирівнювання тексту */
 }
 
 tbody td:first-child {
