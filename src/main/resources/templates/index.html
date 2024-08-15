@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Генадій</h1>
-    </header>
-    <div class="container">
+<header>
+    <h1>Генадій</h1>
+</header>
+<div class="container">
+    <div id="user-list">
         <table>
             <tbody>
-                <tr>
-                    <td>Ім'я Користувача 1</td>
-                    <td>Відповідь 1</td>
-                    <td>Відповідь 2</td>
-                    <td>Відповідь 3</td>
-                </tr>
-                <tr>
-                    <td>Ім'я Користувача 2</td>
-                    <td>Відповідь 1</td>
-                    <td>Відповідь 2</td>
-                    <td>Відповідь 3</td>
-                </tr>
+            <!-- Тут будуть відображені імена користувачів -->
             </tbody>
         </table>
     </div>
-    <script src="/js/script.js"></script>
+    <div id="user-answers" style="display: none;">
+        <button id="back-button">Назад</button>
+        <table>
+            <tbody>
+            <!-- Тут будуть відображені відповіді користувача -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="/js/script.js"></script>
 </body>
 </html>
