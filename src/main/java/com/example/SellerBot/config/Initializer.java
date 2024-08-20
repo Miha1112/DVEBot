@@ -25,7 +25,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 @Component
 public class Initializer {
     @Autowired
-    private AppTelegramBot bot;
+    public static AppTelegramBot bot;
 
     @EventListener({ContextRefreshedEvent.class})
     public void init() {

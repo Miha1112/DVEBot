@@ -138,11 +138,17 @@ public class AppTelegramBot extends TelegramLongPollingBot {
 
     }
 
+    public void checkMessageBeforeSend(String text, long chatId) {
+        System.out.println("nu ppizdec");
+        if (!text.isEmpty()){
+            sendMessageToChat(text,chatId);
+        }
+    }
+
     private void sendMessageToChat(String text, Long chatId) {
         SendMessage message = new SendMessage();
         message.setChatId(chatId);
         message.setText(text);
-
         try {
             execute(message);
         } catch (TelegramApiException e) {

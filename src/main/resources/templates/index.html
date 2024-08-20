@@ -19,7 +19,13 @@
         </table>
     </div>
     <div id="user-answers" style="display: none;">
-        <button id="back-button">Назад</button>
+        <div class="button-container">
+            <button id="back-button">Назад</button>
+            <button id="message-button">Відправити повідомлення</button>
+        </div>
+        <div id="user-info">
+            <strong>Telegram ID: </strong><span id="user-telegram-id"></span>
+        </div>
         <table>
             <tbody>
             <!-- Тут будуть відображені відповіді користувача -->
@@ -27,6 +33,42 @@
         </table>
     </div>
 </div>
+
+<!-- Модальне вікно -->
+<div id="send-message" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="message-form">
+            <input type="hidden" id="telegram-id">
+            <div>
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" required></textarea>
+            </div>
+            <button type="submit">Надіслати</button>
+        </form>
+    </div>
+</div>
+
 <script src="/js/script.js"></script>
+<script>
+    // JavaScript для відкриття і закриття модального вікна
+    var messageButton = document.getElementById("message-button");
+    var modal = document.getElementById("send-message");
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    messageButton.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
