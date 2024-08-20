@@ -58,13 +58,25 @@ public class ReplyKeyboardMarkupUtils {
 
         KeyboardRow firstRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("Дуже подобається"));
-        firstRow.add(new KeyboardButton("Мабуть, подобається"));
-        firstRow.add(new KeyboardButton("Робота мені байдужа"));
-        firstRow.add(new KeyboardButton("Мабуть, не подобається"));
-        firstRow.add(new KeyboardButton("Дуже не подобається"));
+
+        KeyboardRow secondRow = new KeyboardRow();
+        secondRow.add(new KeyboardButton("Мабуть, подобається"));
+        KeyboardRow thirdRow = new KeyboardRow();
+
+        thirdRow.add(new KeyboardButton("Робота мені байдужа"));
+        KeyboardRow fourthRow = new KeyboardRow();
+
+        fourthRow.add(new KeyboardButton("Мабуть, не подобається"));
+        KeyboardRow fidRow = new KeyboardRow();
+
+        fidRow.add(new KeyboardButton("Дуже не подобається"));
 
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
+        keyboard.add(fourthRow);
+        keyboard.add(fidRow);
 
         keyboardMarkup.setKeyboard(keyboard);
 
@@ -77,12 +89,20 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
+        KeyboardRow fourthRow = new KeyboardRow();
+        KeyboardRow fidRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("Так"));
-        firstRow.add(new KeyboardButton("Ні"));
-        firstRow.add(new KeyboardButton("Не знаю"));
+        secondRow.add(new KeyboardButton("Ні"));
+        thirdRow.add(new KeyboardButton("Не знаю"));
 
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
+        keyboard.add(fourthRow);
+        keyboard.add(fidRow);
 
         keyboardMarkup.setKeyboard(keyboard);
 
@@ -95,14 +115,24 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
+        KeyboardRow fourthRow = new KeyboardRow();
+        KeyboardRow fidRow = new KeyboardRow();
+        KeyboardRow sixRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("0"));
-        firstRow.add(new KeyboardButton("1"));
-        firstRow.add(new KeyboardButton("2"));
-        firstRow.add(new KeyboardButton("3"));
-        firstRow.add(new KeyboardButton("4"));
-        firstRow.add(new KeyboardButton("5"));
+        secondRow.add(new KeyboardButton("1"));
+        thirdRow.add(new KeyboardButton("2"));
+        fourthRow.add(new KeyboardButton("3"));
+        fidRow.add(new KeyboardButton("4"));
+        sixRow.add(new KeyboardButton("5"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
+        keyboard.add(fourthRow);
+        keyboard.add(fidRow);
+        keyboard.add(sixRow);
 
         keyboardMarkup.setKeyboard(keyboard);
 
@@ -115,7 +145,12 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
-        firstRow.add(new KeyboardButton("Пропустити"));
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
+        KeyboardRow fourthRow = new KeyboardRow();
+        KeyboardRow fidRow = new KeyboardRow();
+        KeyboardRow sixRow = new KeyboardRow();
+        firstRow.add(new KeyboardButton("Далі"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
 
@@ -130,11 +165,16 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("Так"));
-        firstRow.add(new KeyboardButton("Ні"));
-        firstRow.add(new KeyboardButton("Не знаю"));
+        secondRow.add(new KeyboardButton("Ні"));
+        thirdRow.add(new KeyboardButton("Не знаю"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+        keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
 
         keyboardMarkup.setKeyboard(keyboard);
 
@@ -381,16 +421,18 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setSelective(true);
         keyboardMarkup.setResizeKeyboard(true);
         keyboardMarkup.setOneTimeKeyboard(false);
-
         KeyboardRow firstRow = new KeyboardRow();
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("Незакінчена середня"));
         firstRow.add(new KeyboardButton("Середня освіта"));
-        firstRow.add(new KeyboardButton("Середнє спеціальне"));
-        firstRow.add(new KeyboardButton("Незакінчена вища"));
-        firstRow.add(new KeyboardButton("Вища освіта"));
+        secondRow.add(new KeyboardButton("Середнє спеціальне"));
+        thirdRow.add(new KeyboardButton("Незакінчена вища"));
+        thirdRow.add(new KeyboardButton("Вища освіта"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
-
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
         keyboardMarkup.setKeyboard(keyboard);
 
         return keyboardMarkup;
@@ -402,7 +444,7 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
-        firstRow.add(new KeyboardButton("Пропустити"));
+        firstRow.add(new KeyboardButton("Далі"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
 
@@ -417,14 +459,25 @@ public class ReplyKeyboardMarkupUtils {
         keyboardMarkup.setOneTimeKeyboard(false);
 
         KeyboardRow firstRow = new KeyboardRow();
+
+        KeyboardRow fourthRow = new KeyboardRow();
+        KeyboardRow secondRow = new KeyboardRow();
+        KeyboardRow thirdRow = new KeyboardRow();
+        KeyboardRow sixdRow = new KeyboardRow();
+        KeyboardRow seventhdRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("DVE"));
-        firstRow.add(new KeyboardButton("Konstar"));
-        firstRow.add(new KeyboardButton("Bagland"));
-        firstRow.add(new KeyboardButton("Have A Rest"));
-        firstRow.add(new KeyboardButton("Home Rest"));
-        firstRow.add(new KeyboardButton("Born"));
+        secondRow.add(new KeyboardButton("Konstar"));
+        thirdRow.add(new KeyboardButton("Bagland"));
+        fourthRow.add(new KeyboardButton("Have A Rest"));
+        sixdRow.add(new KeyboardButton("Home Rest"));
+        seventhdRow.add(new KeyboardButton("Born"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
+        keyboard.add(fourthRow);
+        keyboard.add(sixdRow);
+        keyboard.add(seventhdRow);
 
         keyboardMarkup.setKeyboard(keyboard);
 
