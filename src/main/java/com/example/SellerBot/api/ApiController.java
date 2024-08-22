@@ -35,8 +35,8 @@ public class ApiController {
     }
     @PostMapping("/send-message")
     public ResponseEntity<String> sendMessage(@RequestBody MessageRequest messageRequest ) {
-        System.out.println("Ім'я користувача: " + messageRequest.getTelegramId());
-        System.out.println("Повідомлення: " + messageRequest.getMessage());
+        System.out.println("User telegram id to send message: " + messageRequest.getTelegramId());
+        System.out.println("Message text: " + messageRequest.getMessage());
         bot.checkMessageBeforeSend(messageRequest.getMessage(), messageRequest.getChatId());
         System.out.println("try send message in tg");
         return ResponseEntity.ok("Повідомлення відправлено успішно!");

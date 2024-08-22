@@ -121,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error('Error:', error);
             alert('Сталася помилка при відправці повідомлення.');
+        }finally {
+            backButton.click();
         }
     });
 

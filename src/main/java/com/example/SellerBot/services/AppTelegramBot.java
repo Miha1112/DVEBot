@@ -139,7 +139,6 @@ public class AppTelegramBot extends TelegramLongPollingBot {
     }
 
     public void checkMessageBeforeSend(String text, long chatId) {
-        System.out.println("nu ppizdec");
         if (!text.isEmpty()){
             sendMessageToChat(text,chatId);
         }
@@ -154,6 +153,7 @@ public class AppTelegramBot extends TelegramLongPollingBot {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
+        System.out.println("Message successful send to user: " + chatId + ", with text: " + text);
     }
 
     private void sendKeyboardToChat(Long chatId, String text, ReplyKeyboardMarkup keyboardMarkup) {
