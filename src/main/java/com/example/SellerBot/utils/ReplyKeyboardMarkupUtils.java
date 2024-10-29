@@ -43,9 +43,36 @@ public class ReplyKeyboardMarkupUtils {
         KeyboardRow firstRow = new KeyboardRow();
         firstRow.add(new KeyboardButton("Розпочати тестування"));
 
+        KeyboardRow secondRow = new KeyboardRow();
+        secondRow.add(new KeyboardButton("У мене виникли проблеми з технікою"));
+
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
+      //  keyboard.add(secondRow);
 
+        keyboardMarkup.setKeyboard(keyboard);
+
+        return keyboardMarkup;
+    }
+    public static ReplyKeyboardMarkup getProblemKeyboard() {
+        ReplyKeyboardMarkup keyboardMarkup = new ReplyKeyboardMarkup();
+        keyboardMarkup.setSelective(true);
+        keyboardMarkup.setResizeKeyboard(true);
+        keyboardMarkup.setOneTimeKeyboard(false);
+
+        KeyboardRow firstRow = new KeyboardRow();
+        firstRow.add(new KeyboardButton("Проблеми з впн"));
+
+        KeyboardRow secondRow = new KeyboardRow();
+        secondRow.add(new KeyboardButton("Проблеми з ноутбуком"));
+
+        KeyboardRow thirdRow = new KeyboardRow();
+        thirdRow.add(new KeyboardButton("Проблеми з принтером"));
+
+        List<KeyboardRow> keyboard = new ArrayList<>();
+        keyboard.add(firstRow);
+        keyboard.add(secondRow);
+        keyboard.add(thirdRow);
         keyboardMarkup.setKeyboard(keyboard);
 
         return keyboardMarkup;

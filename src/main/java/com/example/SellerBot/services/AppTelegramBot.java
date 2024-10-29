@@ -67,23 +67,24 @@ public class AppTelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(@NotNull Update update) {
         Long chatId;
-
         if (update.hasMessage()) {
             chatId = update.getMessage().getChatId();
             User user = userService.getByTelegramId(update.getMessage().getFrom().getId());
             log.info("Message received: {}", update.getMessage().getText());
-            checkText(update, chatId, user);
+            if(update.getMessage().hasText()){
+                if(user != null)
+                    checkText(update, chatId, user);
+                if(user == null && update.getMessage().getText().equals("/start"))
+                    registration(update);
+            }
         } else if (update.hasCallbackQuery()) {
-
+            log.info("second if detected");
         }
     }
 
     private void checkText(Update update, Long chatId, User user) {
         String text = update.getMessage().getText();
-        if (user == null) {
-            if (text.equals("/start"))
-                registration(update);
-        } else if (text.equals("Головне меню")) {
+        if (text.equals("Головне меню")) {
             sendKeyboardToChat(chatId, "Для продовження обери дію з меню \uD83D\uDC47", ReplyKeyboardMarkupUtils.getMainKeyboard());
         } else if (text.equals("Розпочати тестування")) {
             sendKeyboardToChat(chatId, "Тест почався, я запам'ятаю на якому питанні ми зупинились, якщо тобі потрібно буде взяти паузу," +
@@ -142,6 +143,12 @@ public class AppTelegramBot extends TelegramLongPollingBot {
         if (!text.isEmpty()){
             sendMessageToChat(text,chatId);
         }
+    }
+
+    private void iHaveProblem(User user, Update update) {
+
+
+
     }
 
     private void sendMessageToChat(String text, Long chatId) {

@@ -18,6 +18,6 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class BotConfig {
     @Value("Gena") String botName;
-    @Value("7462967364:AAH_v2MEE3fxolMFZqekf-WGCXj-mcNV_fQ") String token;
+    @Value("7462967364:AAEHNv0qABfaBdtB3r0bFVSm3SDXQNA9HVk") String token;
     @Value("id") String chatId;
 }

@@ -41,6 +41,7 @@ public class ApiController {
         System.out.println("try send message in tg");
         return ResponseEntity.ok("Повідомлення відправлено успішно!");
     }
+
 }
 class MessageRequest {
     @Setter
