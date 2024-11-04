@@ -177,7 +177,7 @@ public class ReplyKeyboardMarkupUtils {
         KeyboardRow fourthRow = new KeyboardRow();
         KeyboardRow fidRow = new KeyboardRow();
         KeyboardRow sixRow = new KeyboardRow();
-        firstRow.add(new KeyboardButton("Далі"));
+        firstRow.add(new KeyboardButton("Пропустити"));
         List<KeyboardRow> keyboard = new ArrayList<>();
         keyboard.add(firstRow);
 
@@ -198,7 +198,6 @@ public class ReplyKeyboardMarkupUtils {
         secondRow.add(new KeyboardButton("Ні"));
         thirdRow.add(new KeyboardButton("Не знаю"));
         List<KeyboardRow> keyboard = new ArrayList<>();
-        keyboard.add(firstRow);
         keyboard.add(firstRow);
         keyboard.add(secondRow);
         keyboard.add(thirdRow);

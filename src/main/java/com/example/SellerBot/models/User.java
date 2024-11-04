@@ -56,6 +56,7 @@ public class User {
     private String secondAnswer18;
     private String secondAnswer19;
     private String secondAnswer20;
+    private String secondAnswer21;
     private LocalDateTime dateOfCreated;
     private int questionsStage = 0;
     private int firstQuestionsQueue = 0;
